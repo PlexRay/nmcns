@@ -1,6 +1,6 @@
 ## Namecoin Resolving Library
-
 [![Join the chat at https://gitter.im/PlexRay/nmcns](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/PlexRay/nmcns?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 The Namecoin Resolving Library provides a [node.js/io.js dns module](http://nodejs.org/api/dns.html)
 compatible interface to perform name resolution using the [Namecoin Data Processing Library](https://www.npmjs.com/search?q=nmcpp).
 
@@ -26,17 +26,26 @@ nmcns.resolveSoa('webrtc.bit', function(err, soa) {
 });
 ```
 #### ES7
-Resolving `_https._tcp.webrtc.bit/SRV/IN`
+Resolving `_smtp._tcp.example.coin/SRV/IN`
 ```js
 import nmcpp from 'nmcpp';
 import nmcns from 'nmcns';
 
-ns = new nmcpp.Resolver({
-    resolver: new nmcpp.Resolver();
+new nmcpp.TestProvider({
+    gtld: 'coin',
+    data: {
+        "d/example": {
+            "service": [
+                [ "smtp", "tcp", 10, 0, 25, "mx.@" ],
+            ],
+        }
+    }
 });
 
+ns = new nmcns.Resolver();
+
 (async function() {
-    var services = await ns.resolveSrvAsync('_https._tcp.webrtc.bit');
+    var services = await ns.resolveSrvAsync('_smtp._tcp.example.coin');
     console.log(services);
 }())
 ```
@@ -44,6 +53,9 @@ ns = new nmcpp.Resolver({
 ### Tests
 * [Online Unit Tests](https://dnschain.info/_s/nmcns/mocha/)
 * [Online Example](https://dnschain.info/_s/nmcns/mocha/?grep=%5B1000%5D%20Examples)
+
+### Examples
+* [Simple DNS Server](https://github.com/PlexRay/nmcns-simple-server)
 
 ### The MIT License (MIT)
 Copyright (c) 2015 PlexRay, Inc.

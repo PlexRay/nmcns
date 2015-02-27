@@ -1,7 +1,7 @@
 {
     "name": "nmcns",
     "description": "Namecoin Resolving Library",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "private": false,
     "main": "./lib/index.js",
     "author": {
@@ -27,8 +27,8 @@
         "lodash": "^3.3.1",
         "compose-extend": "^1.0",
         "ipaddr.js": "^0.1.8",
-        "dnsjs": "^0.1.0",
-        "nmcpp": "^1.1.8"
+        "dnsjs": "^0.1.1",
+        "nmcpp": "^0.1.9"
     },
     "devDependencies": {
         "brfs": "^1.4",
