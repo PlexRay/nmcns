@@ -1,4 +1,6 @@
 ## Namecoin Resolving Library
+
+[![Join the chat at https://gitter.im/PlexRay/nmcns](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/PlexRay/nmcns?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 The Namecoin Resolving Library provides a [node.js/io.js dns module](http://nodejs.org/api/dns.html)
 compatible interface to perform name resolution using the [Namecoin Data Processing Library](https://www.npmjs.com/search?q=nmcpp).
 
