@@ -4,3 +4,4 @@ exclude_paths:
 - "mocha/mocha.js"
 - "mocha/tests.js"
 - "mocha/unit.js"
+- "browser/nmcns.min.js"
