@@ -27,8 +27,8 @@
         "lodash": ">=3.6.0, <4.0.0",
         "compose-extend": "^1.0",
         "ipaddr.js": "^0.1.8",
-        "dnsjs": "git+ssh://git@git.plexrayinc.com/plexdns/dnsjs.git#master",
-        "nmcpp": "git+ssh://git@git.plexrayinc.com/namecoin/nmcpp.git#master"
+        "dnsjs": "^0.1.1",
+        "nmcpp": "^1.1.9"
     },
     "devDependencies": {
         "brfs": "^1.4",
